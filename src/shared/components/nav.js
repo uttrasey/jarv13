@@ -10,6 +10,14 @@ export default class HarvesterNav extends React.Component {
 
   render () {
     return <Navbar inverse={true}>
+        <Navbar.Header>
+            <Navbar.Brand>
+                <LinkContainer to={{ pathname: '/' }}>
+                    <span>Home</span>
+                </LinkContainer>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+        </Navbar.Header>
         <Navbar.Collapse>
             <Nav>
                 <LinkContainer to={{ pathname: '/about' }}>
