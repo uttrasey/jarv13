@@ -1,0 +1,8 @@
+.common {
+    font-style: italic;
+}
+
+.normal {
+    composes: common;
+    color: red;
+}
