@@ -7,7 +7,6 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createLocation from 'history/lib/createLocation';
 import thunk from 'redux-thunk';
-import configureExpressForApi from './api.js';
 import * as reducers from '../shared/reducers';
 import routes from '../shared/routes';
 import fetchComponentData from '../shared/lib/fetchComponentData';
@@ -21,9 +20,6 @@ app.use('/styles', express.static(PATH_STYLES));
 // serve bundled js
 const PATH_DIST = path.resolve(__dirname, '../../dist');
 app.use(express.static(PATH_DIST));
-
-// set up REST API
-configureExpressForApi(app);
 
 // serve up isomorphic
 app.use((req, res) => {
